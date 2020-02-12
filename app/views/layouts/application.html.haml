@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title TestWork
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column
+      %header.masthead.mb-auto
+        .inner
+          %nav.nav.nav-masthead.justify-content-center
+          - if current_user
+            %a.nav-link{:href => destroy_user_session_path} Sign Out
+      = yield

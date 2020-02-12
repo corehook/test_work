@@ -18,3 +18,7 @@ require("channels")
 
 import "bootstrap";
 import "../stylesheets/application";
+import 'bootstrap/dist/js/bootstrap.bundle'
+import 'jquery/dist/jquery.slim'
+import 'popper.js/dist/esm/popper'
+require("bootstrap/dist/js/bootstrap")
